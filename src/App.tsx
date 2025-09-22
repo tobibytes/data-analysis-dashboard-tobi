@@ -12,6 +12,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";  // Fo
 import { BrowserRouter, Routes, Route } from "react-router-dom";  // For navigation between pages
 import Index from "./pages/Index";      // 🏠 Homepage component
 import NotFound from "./pages/NotFound"; // 🚫 404 error page
+import Footer from "./components/Footer";
 
 // Create a client for managing data queries (don't worry about this yet!)
 const queryClient = new QueryClient();
@@ -37,6 +38,7 @@ const App = () => (
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
+      <Footer />
     </TooltipProvider>
   </QueryClientProvider>
 );
